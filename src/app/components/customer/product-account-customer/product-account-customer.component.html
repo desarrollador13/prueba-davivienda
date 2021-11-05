@@ -1,0 +1,41 @@
+<div class="container-fluid" style="padding-left: 0px;">
+    <div>
+        <app-header></app-header>
+    </div>
+    
+    <div class="list-product">
+        <div class="container-fluid">
+            <div class="container" style="margin-bottom: 45px;">
+                <button 
+                    *ngIf="isActivate==true"
+                    style="margin-left: 494px;"
+                    class="btn btn-danger" 
+                    type="button" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                </button>
+                <h2>Listado de Producto Ciente: </h2>
+                <div class="row">
+                    <div class="col-4 mt-4"  
+                        *ngFor="let listAccountClient of listAccountClients; let index = index" >
+                        <div class="card-deck">
+                            <div class="card imagenes">
+                                <div class="card-body text-justify">
+                                    <p class="card-text text-list"><strong class="text-text">{{label.name}}: </strong>{{listAccountClient.name.trim()}}</p>
+                                    <p class="card-text text-list"><strong class="text-text">{{label.number}}: </strong>{{listAccountClient.number}}</p>
+                                    <p class="card-text text-list"><strong class="text-text">{{label.type}}: </strong>{{listAccountClient.type}}</p>
+                                    <p class="card-text text-list"><strong class="text-text">{{label.status}}: </strong>{{listAccountClient.status}}</p>
+                                    <p class="card-text text-list"><strong class="text-text">{{label.balance}}: </strong>{{listAccountClient.balance}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
+

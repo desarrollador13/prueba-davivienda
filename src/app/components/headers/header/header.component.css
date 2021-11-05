@@ -1,0 +1,25 @@
+header {
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+}
+.cabecera {
+    width: 100%;
+    color: #fff;
+    background-color: #ed1c27;
+    position: relative;
+    height: auto;
+}
+
+.custom-image {
+    height: 96px;
+}
+
+
+@media (min-width: 768px) {
+    header div.cabecera {
+        height: auto;
+    }
+}
